@@ -18,8 +18,9 @@ class profile_define_regexp extends profile_define_base {
         $form->setType('param2', PARAM_INT);
 
         /// Param 3 Regular Expression
-        $form->addElement('text', 'param3', get_string('profilefieldregexp', 'admin'), 'size="50"');
-        $form->setDefault('param6', '*');
+//don't work        $form->addElement('text', 'param3', get_string('regular_expression', 'profilefield_regexp'), 'size="50"');
+        $form->addElement('text', 'param3', "Espressione regolare PHP", 'size="50"');
+        $form->setDefault('param3', '*');
         $form->setType('param3', PARAM_TEXT);
 
         /// Param 4 for text type contains a link

@@ -8,3 +8,4 @@
  */
 
 $string['pluginname'] = 'Regexp Match Text input';
+$string['regular_expression'] = 'PCRE Regular expression';
