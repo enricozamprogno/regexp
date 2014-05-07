@@ -1,3 +1,4 @@
+<?php
 /**
  * Strings for component 'profilefield_regexp', language 'en', branch 'MOODLE_20_STABLE'
  *
