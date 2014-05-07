@@ -16,11 +16,11 @@ class profile_define_regexp extends profile_define_base {
         $form->addElement('text', 'param2', get_string('profilefieldmaxlength', 'admin'), 'size="6"');
         $form->setDefault('param2', 2048);
         $form->setType('param2', PARAM_INT);
-^M
-        /// Param 3 Regular Expression^M
-        $form->addElement('text', 'param3', get_string('profilefieldregexp', 'admin'), 'size="50"');^M
-        $form->setDefault('param6', '*');^M
-        $form->setType('param3', PARAM_TEXT);^M
+
+        /// Param 3 Regular Expression
+        $form->addElement('text', 'param3', get_string('profilefieldregexp', 'admin'), 'size="50"');
+        $form->setDefault('param6', '*');
+        $form->setType('param3', PARAM_TEXT);
 
         /// Param 4 for text type contains a link
         $form->addElement('text', 'param4', get_string('profilefieldlink', 'admin'));
@@ -35,6 +35,7 @@ class profile_define_regexp extends profile_define_base {
                               );
         $form->addElement('select', 'param5', get_string('profilefieldlinktarget', 'admin'), $targetoptions);
         $form->setType('param5', PARAM_RAW);
+
 /* something don't works here. the form take only the first 5 parameters !!!
         /// Param 6 for text type detemines if this is a password field or not
         $form->addElement('selectyesno', 'param6', get_string('profilefieldispassword', 'admin'));
