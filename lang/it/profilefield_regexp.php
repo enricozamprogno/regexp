@@ -10,3 +10,6 @@
 
 $string['pluginname'] = 'Regexp Match Text input';
 $string['regular_expression'] = 'PCRE Regular expression';
+$string['profilefieldregexp'] = 'Espressione regolare PHP (PCRE)';
+$string['profilefieldregexperrormessage'] = 'Messaggio di errore per l\'utente';
+$string['err_regexp'] = 'Il testo inserito non corrisponde alla espressione regolare';

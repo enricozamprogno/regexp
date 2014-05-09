@@ -18,32 +18,15 @@ class profile_define_regexp extends profile_define_base {
         $form->setType('param2', PARAM_INT);
 
         /// Param 3 Regular Expression
-//don't work        $form->addElement('text', 'param3', get_string('regular_expression', 'profilefield_regexp'), 'size="50"');
-        $form->addElement('text', 'param3', "Espressione regolare PHP", 'size="50"');
+	$form->addElement('text', 'param3', get_string('profilefieldregexp', 'profilefield_regexp'), 'size="50"');
+//      $form->addElement('text', 'param3', "Espressione regolare PHP", 'size="50"');
         $form->setDefault('param3', '*');
         $form->setType('param3', PARAM_TEXT);
 
-        /// Param 4 for text type contains a link
-        $form->addElement('text', 'param4', get_string('profilefieldlink', 'admin'));
-        $form->setType('param4', PARAM_URL);
-        $form->addHelpButton('param4', 'profilefieldlink', 'admin');
-
-        /// Param 5 for text type contains link target
-        $targetoptions = array( ''       => get_string('linktargetnone', 'editor'),
-                                '_blank' => get_string('linktargetblank', 'editor'),
-                                '_self'  => get_string('linktargetself', 'editor'),
-                                '_top'   => get_string('linktargettop', 'editor')
-                              );
-        $form->addElement('select', 'param5', get_string('profilefieldlinktarget', 'admin'), $targetoptions);
-        $form->setType('param5', PARAM_RAW);
-
-/* something don't works here. the form take only the first 5 parameters !!!
-        /// Param 6 for text type detemines if this is a password field or not
-        $form->addElement('selectyesno', 'param6', get_string('profilefieldispassword', 'admin'));
-        $form->setDefault('param6', 0); // defaults to 'no'
-        $form->setType('param6', PARAM_INT);
-*/
-
+        /// Param 4 Regular Expression
+	$form->addElement('text', 'param4', get_string('profilefieldregexperrormessage', 'profilefield_regexp'), 'size="80"');
+        $form->setDefault('param4', 'regexperrormessage');
+        $form->setType('param4', PARAM_TEXT);
     }
 
 }

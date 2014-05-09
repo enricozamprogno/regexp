@@ -9,3 +9,6 @@
 
 $string['pluginname'] = 'Regexp Match Text input';
 $string['regular_expression'] = 'PCRE Regular expression';
+$string['err_regexp'] = 'Input text doesn\'t match PCRE Regular expression';
+$string['profilefieldregexp'] = 'PCRE Regular expression';
+$string['profilefieldregexperrormessage'] = 'Messaggio di errore per l\'utente';
