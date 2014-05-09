@@ -38,13 +38,17 @@ class profile_field_regexp extends profile_field_base {
                         $value = '';
                 }
         }
-	$regexp= $this->field->param3;
-	$errmess= $this->field->param4;
-	if ($value != '' && !preg_match($regexp, $value)){
-		if ($errmess !=''){
-			$errors[$this->inputname] = $errmess;
-		else
-			$errors[$this->inputname] = get_string('err_regexp','profilefield_regexp');
+	if ($value != ''){
+		$regexp= $this->field->param3;
+		$errmess= $this->field->param4;
+		$matches=array();
+		$status=preg_match($regexp, $value, $matches);
+		if ($status != 1 || ($status == 1 && $matches[0]!=$value)){
+			if ($errmess !=''){
+				$errors[$this->inputname] = $errmess;
+			} else {
+				$errors[$this->inputname] = get_string('err_regexp','profilefield_regexp');
+			}
 		}
 	}
         return $errors;
