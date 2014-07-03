@@ -2,16 +2,6 @@
 
 class profile_field_regexp extends profile_field_base {
 
-    /**
-     * Overwrite the base class to display the data for this field
-    function display_data() {
-        /// Default formatting
-        $data = parent::display_data();
-
-        return $data;
-    }
-*/
-
     function edit_field_add($mform) {
         $size = $this->field->param1;
         $maxlength = $this->field->param2;
