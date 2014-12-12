@@ -8,7 +8,7 @@ class profile_field_regexp extends profile_field_base {
         $regexp= $this->field->param3;
 
         /// Create the form field
-	$mform->addElement('text', $this->inputname, format_string($this->field->name.' '.$regexp), 'maxlength="'.$size.'" size="'.$maxlenght.'" ');
+	$mform->addElement('text', $this->inputname, format_string($this->field->name.' '.$regexp), 'maxlength="'.$size.'" size="'.$maxlength.'" ');
         $mform->setType($this->inputname, PARAM_TEXT);
     }
 
